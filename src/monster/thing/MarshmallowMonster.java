@@ -10,5 +10,14 @@ public class MarshmallowMonster
 	private int buttonCount;
 	private String name;
 	
-	
+	public MarshmallowMonster()
+	{
+		this.appendageCount = -99;
+		this.antennaAmount = -99.99;
+		this.eyeCount = -99;
+		this.hasMoles = false;
+		this.mouthCount = -99;
+		this.buttonCount = -99;
+		this.name = "Edwin, the kindhearted";
+	}
 }
