@@ -1,5 +1,11 @@
 package monster.model;
 
-public class Controller {
+import monster.thing.MarshmallowMonster;
 
+public class Controller
+{
+	void start()
+	{
+		MarshmallowMonster app = new MarshmallowMonster();
+	}
 }
