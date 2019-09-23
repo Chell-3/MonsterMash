@@ -60,6 +60,10 @@ public class MarshmallowMonster
 	{
 		return name;
 	}
+	public void setAppendageCount(int appendageCount)
+	{
+		this.appendageCount = appendageCount;
+	}
 	public String toString()
 	{
 		String description = "sup bruh, i be da monstah known only as " + name;
