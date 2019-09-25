@@ -37,6 +37,19 @@ public class Controller
 	}
 	private void makeMonsters()
 	{
-		
+		String response = "";
+		System.out.println("What do you want your monster's name to be?");
+		response = inputScanner.nextLine();
+		deadlyMonsterOfDoom.setName(response);
+		int wholeNumber = 0;
+		double realNumber = 0.0;
+		System.out.println("How many limbs does your monster have?");
+		wholeNumber = inputScanner.nextInt();
+		inputScanner.nextLine();
+		deadlyMonsterOfDoom.setAppendageCount(wholeNumber);
+		System.out.println("How many antennae does your monster have?");
+		realNumber = inputScanner.nextDouble();
+		inputScanner.nextLine();
+		deadlyMonsterOfDoom.setAntennaAmount(realNumber);
 	}
 }
