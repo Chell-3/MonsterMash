@@ -64,6 +64,30 @@ public class MarshmallowMonster
 	{
 		this.appendageCount = appendageCount;
 	}
+	public void setAntennaAmount(double antennaAmount)
+	{
+		this.antennaAmount = antennaAmount;
+	}
+	public void setEyeCount(int eyeCount)
+	{
+		this.eyeCount = eyeCount;
+	}
+	public void setHasMoles(boolean hasMoles)
+	{
+		this.hasMoles = hasMoles;
+	}
+	public void setMouthCount(int mouthCount)
+	{
+		this.mouthCount = mouthCount;
+	}
+	public void setButtonCount(int buttonCount)
+	{
+		this.buttonCount = buttonCount;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
 	public String toString()
 	{
 		String description = "sup bruh, i be da monstah known only as " + name;
