@@ -12,7 +12,7 @@ public class Controller
 	public Controller()
 	{
 		inputScanner = new Scanner(System.in);
-		defaultMonster = new MarshmallowMonster();
+		defaultMonster = new MarshmallowMonster(5,1,15,false,3,2,"Edwin");
 		deadlyMonsterOfDoom = new MarshmallowMonster(5,1,15,false,3,2,"Edwin");
 	}	
 	public void start()
@@ -21,7 +21,7 @@ public class Controller
 		String answer = inputScanner.nextLine();
 		if (answer.equalsIgnoreCase("yes"))
 		{
-			makeMonsters();
+			makeManyMonsters();
 		}
 		else
 		{
@@ -51,5 +51,22 @@ public class Controller
 		realNumber = inputScanner.nextDouble();
 		inputScanner.nextLine();
 		deadlyMonsterOfDoom.setAntennaAmount(realNumber);
+		System.out.println("Does your monster have any moles?");
+		String boolInput = inputScanner.nextLine();
+		deadlyMonsterOfDoom.setHasMoles((boolInput.equalsIgnoreCase("yes")||boolInput.equalsIgnoreCase("Y")));
+	}
+	private void makeManyMonsters()
+	{
+		MarshmallowMonster list[] = {deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom,deadlyMonsterOfDoom};
+		for(int monsterCount = 0; monsterCount < 4; monsterCount++)
+		{
+			MarshmallowMonster mine = new MarshmallowMonster();
+			list[monsterCount] = mine;
+		}
+		System.out.println(list[0]);
+		System.out.println(list[1]);
+		System.out.println(list[2]);
+		System.out.println(list[3]);
+		System.out.println(list[4]);
 	}
 }
