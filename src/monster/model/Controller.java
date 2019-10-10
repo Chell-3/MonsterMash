@@ -51,6 +51,7 @@ public class Controller
 			response = view.askQuestion("That's not an acceptable double(Type a decimal or something).");
 		}
 		deadlyMonsterOfDoom.setAntennaAmount(Double.parseDouble(response));
+		
 		response = view.askQuestion("Does " + deadlyMonsterOfDoom.getName() + " have any moles?");
 		deadlyMonsterOfDoom.setHasMoles((response.equalsIgnoreCase("yes")||response.equalsIgnoreCase("Y")));
 		
