@@ -1,5 +1,5 @@
 package monster.model;
-
+import java.util.ArrayList;
 import third.view.Popup;
 import java.util.Scanner;
 
@@ -11,15 +11,18 @@ public class Controller
 	private MarshmallowMonster defaultMonster;
 	private MarshmallowMonster deadlyMonsterOfDoom;
 	private Scanner inputScanner;
+	private ArrayList<MarshmallowMonster> monsters;
 	public Controller()
 	{
 		view = new Popup();
 		inputScanner = new Scanner(System.in);
 		defaultMonster = new MarshmallowMonster(5,1,15,false,3,2,"Edwin");
 		deadlyMonsterOfDoom = new MarshmallowMonster(5,1,15,false,3,2,"Edwin");
+		monsters = new ArrayList<MarshmallowMonster>();
 	}	
 	public void start()
 	{
+		monsterList();
 		String answer = view.askQuestion("Would you like to create a monster?");
 		if (answer.equalsIgnoreCase("yes"))
 		{
@@ -31,6 +34,25 @@ public class Controller
 		}
 		inputScanner.close();
 		view.displayMessage(deadlyMonsterOfDoom.getName() + " is in posession of " + deadlyMonsterOfDoom.getAntennaAmount() + " Antennae. You should fear him.\n" +	deadlyMonsterOfDoom.getName() + " Has your address and also " + deadlyMonsterOfDoom.getAppendageCount() + " Limbs. With this information, he can take over your house.\n" + deadlyMonsterOfDoom.getName() + " makes 1.5 million dollars per year. With this money, he can afford glasses for each and every one of his " + deadlyMonsterOfDoom.getEyeCount() + " eyes.\nI certainly fear " + deadlyMonsterOfDoom.getName() + " and his " + deadlyMonsterOfDoom.getMouthCount() + " perfect mouths.\nLuckily, however, " + deadlyMonsterOfDoom.getName() + " has multiple buttons that can be pressed. to be specific, he has " + deadlyMonsterOfDoom.getButtonCount() + " buttons.");
+	}
+	private void monsterList()
+	{
+		for (int index = 0; index < 5; index++)
+		{
+			String name = view.askQuestion("What name do you wish to bestow upon this most powerful of monsters?");
+			MarshmallowMonster temp = new MarshmallowMonster();
+			temp.setName(name);
+			monsters.add(temp);
+		}
+		for (MarshmallowMonster current : monsters)
+		{
+			view.displayMessage("Here is a monster. Its name is " + current.getName());
+		}
+		for (int index = monsters.size();index>0;index--)
+		{
+			monsters.remove(index-1);
+		}
+		System.out.println(monsters);
 	}
 	private void makeMonsters()
 	{
