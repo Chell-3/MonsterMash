@@ -22,18 +22,20 @@ public class Controller
 	}	
 	public void start()
 	{
-		monsterList();
-		String answer = view.askQuestion("Would you like to create a monster?");
-		if (answer.equalsIgnoreCase("yes"))
-		{
-			makeMonsters();
-		}
-		else
-		{
-			view.displayMessage("Ok then. Let me telly you about my monster, " + deadlyMonsterOfDoom.getName());
-		}
-		inputScanner.close();
-		view.displayMessage(deadlyMonsterOfDoom.getName() + " is in posession of " + deadlyMonsterOfDoom.getAntennaAmount() + " Antennae. You should fear him.\n" +	deadlyMonsterOfDoom.getName() + " Has your address and also " + deadlyMonsterOfDoom.getAppendageCount() + " Limbs. With this information, he can take over your house.\n" + deadlyMonsterOfDoom.getName() + " makes 1.5 million dollars per year. With this money, he can afford glasses for each and every one of his " + deadlyMonsterOfDoom.getEyeCount() + " eyes.\nI certainly fear " + deadlyMonsterOfDoom.getName() + " and his " + deadlyMonsterOfDoom.getMouthCount() + " perfect mouths.\nLuckily, however, " + deadlyMonsterOfDoom.getName() + " has multiple buttons that can be pressed. to be specific, he has " + deadlyMonsterOfDoom.getButtonCount() + " buttons.");
+		while(true)
+			{System.out.println(view.askWarningOptions("Suffer?","You've been invited to suffer!","Join","Join"));}
+		//monsterList();
+		//String answer = view.askQuestion("Would you like to create a monster?");
+		//if (answer.equalsIgnoreCase("yes"))
+		//{
+		//	makeMonsters();
+		//}
+		//else
+		//{
+		//	view.displayMessage("Ok then. Let me telly you about my monster, " + deadlyMonsterOfDoom.getName());
+		//}
+		//inputScanner.close();
+		//view.displayMessage(deadlyMonsterOfDoom.getName() + " is in posession of " + deadlyMonsterOfDoom.getAntennaAmount() + " Antennae. You should fear him.\n" +	deadlyMonsterOfDoom.getName() + " Has your address and also " + deadlyMonsterOfDoom.getAppendageCount() + " Limbs. With this information, he can take over your house.\n" + deadlyMonsterOfDoom.getName() + " makes 1.5 million dollars per year. With this money, he can afford glasses for each and every one of his " + deadlyMonsterOfDoom.getEyeCount() + " eyes.\nI certainly fear " + deadlyMonsterOfDoom.getName() + " and his " + deadlyMonsterOfDoom.getMouthCount() + " perfect mouths.\nLuckily, however, " + deadlyMonsterOfDoom.getName() + " has multiple buttons that can be pressed. to be specific, he has " + deadlyMonsterOfDoom.getButtonCount() + " buttons.");
 	}
 	private void monsterList()
 	{
